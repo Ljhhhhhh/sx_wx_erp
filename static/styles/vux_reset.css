@@ -1,0 +1,66 @@
+a {
+  color: #ffa201;
+}
+.name_search .weui-search-bar__label {
+  height: 26px;
+}
+.name_search .weui-search-bar {
+  background: #eee;
+}
+.name_search .weui-search-bar:after {
+  border-bottom: none;
+}
+.vux-header-right span {
+  font-size: 18px;
+  color: #fbc700;
+}
+.dialog .weui-dialog {
+  max-width: 350px;
+  border-radius: 15px;
+}
+.vux-popup-dialog .weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
+  color: #fbc700;
+}
+.weui-cells .weui-cells_checkbox .weui-check:checked + .vux-checklist-icon-checked:before {
+  color: #fbc700;
+}
+.weui-btn_primary {
+  background-color: #fbc700;
+}
+.weui-btn_primary:not(.weui-btn_disabled):active {
+  background-color: #fbc700;
+}
+.no-border-top .weui-cells:before {
+  border-top-width: 0;
+}
+.content .weui-cells {
+  margin-top: 10px;
+  padding: 0;
+  background-color: transparent;
+}
+.content .weui-cells::before,
+.content .weui-cells::after {
+  display: none;
+}
+.content .weui-cells .vux-x-textarea {
+  padding: 10px 15px;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.content .weui-cells .vux-x-textarea textarea {
+  background-color: transparent;
+}
+.weui-cell.address .vux-label {
+  min-width: 9em;
+}
+.weui-cell.address .vux-label::before {
+  content: '';
+  display: inline-block;
+  vertical-align: -2px;
+  width: 17px;
+  height: 17px;
+  background: url('../images/icons/map_icon.png') no-repeat center;
+  background-size: 100%;
+  margin-right: 0.2em;
+}

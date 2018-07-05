@@ -1,0 +1,92 @@
+a {
+  color: #ffa201;
+}
+
+.name_search {
+  .weui-search-bar__label {
+    //top: 4px;
+    height: 32px;
+  }
+  .weui-search-bar {
+    background: #eee; //padding: 8px 10px 0 10px;
+  }
+  .weui-search-bar:after {
+    border-bottom: none;
+  }
+}
+
+.vux-header-right span {
+  font-size: 18px;
+  color: #fbc700;
+}
+
+.dialog .weui-dialog {
+  max-width: 350px;
+  border-radius: 15px;
+}
+
+.vux-popup-dialog .weui-cells_radio .weui-check:checked+.weui-icon-checked:before {
+  color: #fbc700;
+}
+
+.weui-cells .weui-cells_checkbox .weui-check:checked+.vux-checklist-icon-checked:before {
+  color: #fbc700;
+}
+
+.weui-btn_primary {
+  background-color: #fbc700;
+}
+
+.weui-btn_primary:not(.weui-btn_disabled):active {
+  background-color: #fbc700;
+}
+
+.no-border-top .weui-cells:before {
+  border-top-width: 0;
+}
+.weui-cells.vux-no-group-title{
+   margin-top: 0;
+    .weui-cell__hd i{ margin-right: 12px; color: #cacaca;}
+   
+  }
+
+  
+.content .weui-cells {
+  //会议签到页面
+  margin-top: 10px;
+  padding: 0;
+  background-color: transparent;
+  &::before,
+  &::after {
+    display: none;
+  }
+  .vux-x-textarea {
+    width:92%;
+    padding: 10px 8px 10px 11px;
+   // border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    font-size: 15px;
+    margin:10px 5px;
+    textarea {
+      background-color: transparent;
+    }
+  }
+}
+.weui-cells.vux-no-group-title{
+  font-size: 15px;
+}
+.weui-cell.address {
+  .vux-label {
+    min-width: 9em;
+    &::before{
+      content: '';
+      display: inline-block;
+      vertical-align: -3px;
+      width: 17px;
+      height: 17px;
+      background: url('../images/icons/map_icon.png') no-repeat center;
+      background-size: 100%;
+      margin-right: 0.6em;
+    }
+  }
+}

@@ -10,7 +10,7 @@
         </h5>
         <div v-html="notice.noticecontent" class="textdetail"></div>
       </div>
-      <div class="adjunct" v-if="notice.adjunctArr">
+      <div class="adjunct" v-if="adjuct_show">
         <h5>附件：</h5>
         <p v-for="(val,key,index) in this.notice.adjunctArr" :key="index" @click="download(val)">
           <img src="static/images/icons/picarr_icon.png" class="folder">
@@ -38,7 +38,8 @@
   export default {
     data() {
       return {
-        notice: {}
+        notice: {},
+        adjuct_show: false
       }
     },
     methods: {
@@ -53,6 +54,9 @@
             this.notice = res.data;
             let filenameArr = this.notice.fileNames.split('|');
             let adjuct_len = this.notice.picarr.length;
+            if(adjuct_len>0) {
+              this.adjuct_show = true;
+            }
             let adjunctArr = {};
             for (let i = 0; i < adjuct_len; i++) {
               adjunctArr[filenameArr[i]] = this.notice.picarr[i];
@@ -103,7 +107,7 @@
         line-height: 30px;
         font-size: 16px;
         color: #333;
-      } 
+      }
 
       h5 {
         line-height: 30px;

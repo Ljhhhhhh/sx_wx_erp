@@ -41,6 +41,7 @@ myAxios.interceptors.request.use(function (config) {
 });
 myAxios.interceptors.response.use(function (response) {
   if (200 === response.status) {
+    console.log('111111:', response);
     response = response.data;
     if (response.status !== 200) {
       // console.info('axios.config.js:',response)

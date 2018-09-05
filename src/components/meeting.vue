@@ -40,7 +40,7 @@
       </ul>
       <x-button :disabled="signState" type="primary" @click.native="signIn">{{signText}}</x-button>
     </div>
-    <toast v-model="toast.show" :type="toast.type">{{toast.msg}}</toast>
+    <toast v-model="toast.show" :type="toast.type">{{toast.text}}</toast>
   </div>
 </transition>
 </template>
@@ -113,9 +113,11 @@
           type: 1
         };
         checkMeetings(data).then(res => {
-          if (res.data === 'success') {
+          console.log('res:', res)
+          if (res.msg === '成功') {
             this.toast.show = true;
             this.toast.text = '签到成功';
+            this.toast.type = 'success';
             this.signSum++;
             this.noSignSum--;
             this.signState = true;
@@ -123,6 +125,7 @@
           } else {
             this.toast.show = true;
             this.toast.text = '签到失败，请重试';
+            this.toast.type = 'cancel';
           }
         })
       },

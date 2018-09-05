@@ -23,7 +23,7 @@
               <span>个人信息</span>
             </p>
           </cell>
-          <cell link="/login" :border-intent="false">
+          <cell @click.native="qrcode" is-link :border-intent="false">
             <p slot="icon">
               <i class="fa fa-qrcode"></i>
               <span>扫一扫</span>
